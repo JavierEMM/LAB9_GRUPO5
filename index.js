@@ -12,7 +12,6 @@ $(document).ready(function () {
             conntentHtml+= "<td> <a href='detalleRegion/detalleRegion.html?region="+ (i+1) +"' class='btn btn-primary' >" + "Detalles"  +"</a> </td>";
             conntentHtml+= "<tr>";
         }
-        conntentHtml+= "</form>";
         $("#body-paises").html(conntentHtml);
     }).fail(function (err){
         console.log(err);
