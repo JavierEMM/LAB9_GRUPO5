@@ -7,21 +7,16 @@ $(document).ready(function () {
         var conntentHtml = "";
         for(let i=0; i <rpta.count;i++){
             conntentHtml+= "<tr>";
-            //conntentHtml+= "<form action='detalleRegion/detalleRegion.html' id='regiomFrm'>";
             conntentHtml+= "<td>"+ (i+1) +"</td>";
             conntentHtml+= "<td>" +listaRegiones[i].name  +"</td>";
-            conntentHtml+= "<input type='hidden' id='idregion' name='idregion' value=" + (i+1) + ">";
-            conntentHtml+= "<td> <button >" + "Detalles"  +"</button> </td>";
-            //conntentHtml+= "</form>";
+            conntentHtml+= "<td> <a href='detalleRegion/detalleRegion.html?region="+ (i+1) +"' class='btn btn-primary' >" + "Detalles"  +"</a> </td>";
             conntentHtml+= "<tr>";
         }
+        conntentHtml+= "</form>";
         $("#body-paises").html(conntentHtml);
     }).fail(function (err){
         console.log(err);
     });
 
-    $("form").submit(function (event){
-        window.location.href="detalleLocacion/detalleLocacion.html";
-    })
 
 });
