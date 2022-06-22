@@ -39,8 +39,9 @@ $(document).ready(function () {
                $.get(listaPkmn[j].pokemon.url).done(function (pk){
                    console.log(pk);
                    $("#pokemons").append("<div style='border: solid;margin-left: 20px;margin-right: 20px;margin-bottom: 20px' class='col-2' > <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/version\n" +
-                       "s/generation-v/black-white/animated/back/"+pk.id +".gif'> <br>" +pk.name +
+                       "s/generation-v/black-white/animated/"+pk.id +".gif'> <br>" +pk.name +
                        " </div>");
+
                }).fail(function (er){
                    console.log(er);
                })
